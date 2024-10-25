@@ -1,0 +1,288 @@
+<html lang="en">
+  <head>
+    <!-- Meta tags, title, and stylesheets -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Rich Media Gallery</title>
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@1,900,700,500,300,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <div class="header-content">
+        <!-- Logo -->
+        <div class="logo">
+          <img src="images/logo.svg" alt="Dochase Logo" width="131" height="26">
+        </div>
+        <!-- Mobile Navigation Toggle -->
+        <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+          <!-- SVG for hamburger icon -->
+          <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h-9 w-9" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M4 6l16 0"/>
+            <path d="M4 12l16 0"/>
+            <path d="M4 18l16 0"/>
+          </svg>
+        </button>
+        <!-- Main Navigation -->
+        <nav id="nav-menu" role="navigation" aria-label="Main Navigation">
+          <!-- Navigation menu items -->
+          <ul>
+            <li><a href="https://dochase.com/" target="_blank" rel="noopener noreferrer">Home</a></li>
+            <li>
+              <a href="https://dochase.com/products/" target="_blank" rel="noopener noreferrer">Products</a>
+              <span class="dropdown-arrow">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-2 h-3 w-3 my-auto" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                  <path d="M6 9l6 6l6 -6"/>
+                </svg>
+              </span>
+              <ul class="dropdown-menu">
+                <li><a href="https://dochase.com/products/#messaging" target="_blank" rel="noopener noreferrer">Messaging</a></li>
+                <li><a href="https://dochase.com/products/#chatbot" target="_blank" rel="noopener noreferrer">Chatbot</a></li>
+                <li><a href="https://dochase.com/products/#native-ads" target="_blank" rel="noopener noreferrer">Native Ads</a></li>
+                <li><a href="https://dochase.com/products/#click-to-whatsapp" target="_blank" rel="noopener noreferrer">Click to Whatsapp</a></li>
+                <li><a href="https://dochase.com/products/#click-to-ussd" target="_blank" rel="noopener noreferrer">Click to USSD</a></li>
+                <li><a href="https://dochase.com/products/#video-ads" target="_blank" rel="noopener noreferrer">Video Ads</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="https://dochase.com/solutions/" target="_blank" rel="noopener noreferrer">Solutions</a>
+              <span class="dropdown-arrow">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="ml-2 h-3 w-3 my-auto" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                  <path d="M6 9l6 6l6 -6"/>
+                </svg>
+              </span>
+              <ul class="dropdown-menu">
+                <li><a href="https://dochase.com/solutions/#dsp" target="_blank" rel="noopener noreferrer">Programmatic Advertising</a></li>
+                <li><a href="https://dochase.com/solutions/#customer-acquisition" target="_blank" rel="noopener noreferrer">Lead Generation</a></li>
+                <li><a href="https://dochase.com/solutions/#customer-acquisition" target="_blank" rel="noopener noreferrer">App Installs</a></li>
+                <li><a href="https://dochase.com/solutions/#retargeting" target="_blank" rel="noopener noreferrer">Retargeting</a></li>
+                <li><a href="https://dochase.com/solutions/#customer-engagement" target="_blank" rel="noopener noreferrer">Customer Engagement</a></li>
+                <li><a href="https://dochase.com/solutions/#customer-acquisition" target="_blank" rel="noopener noreferrer">Web and App Traffic</a></li>
+              </ul>
+            </li>
+            <li><a href="https://dochase.com/success-stories/" target="_blank" rel="noopener noreferrer">Success Stories</a></li>
+          </ul>
+        </nav>
+        <!-- Header Buttons -->
+        <div class="button-group">
+          <button class="btn-contact" onclick="window.open('https://dochase.com/#form', '_blank')">Contact Us</button>
+          <button class="btn-login" onclick="window.open('https://dashboard.dochaseadx.com/index.aspx', '_blank')">Login</button>
+        </div>
+      </div>
+    </header>
+    <!-- Main Content Section -->
+    <main>
+      <h1>Rich Media Gallery</h1>
+      <!-- Search and Filter Section -->
+      <div class="search-filter">
+        <input type="text" id="search" placeholder="Search...">
+        <select id="layout-dropdown">
+          <option value="">Select Layout</option>
+          <!-- Layout options -->
+          <option value="3d-cube">3D Cube</option>
+          <option value="3d-prism">3D Prism</option>
+          <option value="parallax-cube">Parallax Cube</option>
+          <option value="blinds">Blinds</option>
+          <option value="blinds-swipe">Blinds Swipe</option>
+          <option value="carousel">Carousel</option>
+          <option value="carousel-splitscreen">Carousel Split Screen</option>
+          <option value="deck-of-cards">Deck of Cards</option>
+          <option value="drag-to-reveal">Drag to Reveal</option>
+          <option value="scratch">Scratch</option>
+          <!-- <option value="floating-object">Floating Object</option>
+          <option value="flip-book">Flip Book</option> -->
+        </select>
+      </div>
+      <!-- Gallery Section -->
+      <div class="gallery" id="gallery">
+        <div class="card" data-category="parallax-cube">
+          <div class="rich-media-container">
+            <!-- Added new ad tag for Parallax Cube 2 -->
+            <ins class="adcads"
+              data-adc-id="eYmOzIUBf1sy"
+              data-unit="eYmOzIUBf1sy"
+              data-clickable="yes"
+              data-redir="yes"
+              data-click-tracker="[ADS_CLICK_URL]"
+              data-click-macro="[ADS_CLICK_URL]"
+              data-has-desktop="yes"
+              data-responsive="yes"
+              data-width="100%"
+              data-height="250">
+              <script src="https://media.adcanvas.com/eYmOzIUBf1sy/adtag.js" type="text/javascript" async></script>
+            </ins>
+          </div>
+          <h2>Parallax Cube: Rida</h2>
+          <p>A layout that creates a parallax effect with multiple assets on each side.</p>
+        </div>
+        <div class="card" data-category="parallax-cube">
+          <div class="rich-media-container">
+            <!-- Added new ad tag for Parallax Cube 2 -->
+            <ins class="adcads"
+              data-adc-id="eYmOzIUBf1sy"
+              data-unit="eYmOzIUBf1sy"
+              data-clickable="yes"
+              data-redir="yes"
+              data-click-tracker="[ADS_CLICK_URL]"
+              data-click-macro="[ADS_CLICK_URL]"
+              data-has-desktop="yes"
+              data-responsive="yes"
+              data-width="100%"
+              data-height="250">
+              <script src="https://media.adcanvas.com/eYmOzIUBf1sy/adtag.js" type="text/javascript" async></script>
+            </ins>
+          </div>
+          <h2>Parallax Cube: Rida</h2>
+          <p>A layout that creates a parallax effect with multiple assets on each side.</p>
+        </div>
+        <div class="card" data-category="3d-cube">
+          <div class="rich-media-container">
+            <!-- Added ad tag for 3D Cube 2 -->
+            <ins class="adcads"
+              data-adc-id="GYedQszufwZc"
+              data-unit="GYedQszufwZc"
+              data-clickable="yes"
+              data-redir="yes"
+              data-click-tracker="[ADS_CLICK_URL]"
+              data-click-macro="[ADS_CLICK_URL]"
+              data-has-desktop="yes"
+              data-responsive="yes"
+              data-width="100%"
+              data-height="250">
+              <script src="https://media.adcanvas.com/GYedQszufwZc/adtag.js" type="text/javascript" async></script>
+            </ins>
+          </div>
+          <h2>3D Cube: Dtunes</h2>
+          <p>A layout that rotates in 3D space, providing a dynamic viewing experience.</p>
+        </div>
+        </div>
+      <!-- Load More Button -->
+      <button id="load-more">Load More</button>
+    </main>
+
+
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-content">
+        <!-- Footer Left: Logo, Tagline, and Social Media Links -->
+        <div class="footer-left">
+          <div class="footer-logo">
+            <img src="images/dochase-adx-logo.svg" alt="Dochase Logo" width="131" height="26">
+          </div>
+          <p class="footer-tagline">
+            Emerging market leader in Programmatic Advertising, Ad exchange, DSP and SSP
+          </p>
+          <div class="social-media-links">
+            <a href="https://www.instagram.com/dochase/" target="_blank" rel="noopener noreferrer">
+              <img src="images/instagram-icon.svg" alt="Instagram" width="28" height="28">
+            </a>
+            <a href="https://www.facebook.com/dochase/" target="_blank" rel="noopener noreferrer">
+              <img src="images/facebook-icon.svg" alt="Facebook" width="28" height="28">
+            </a>
+            <a href="https://twitter.com/dochase" target="_blank" rel="noopener noreferrer">
+              <img src="images/twitter-icon.svg" alt="Twitter" width="28" height="28">
+            </a>
+            <a href="https://www.linkedin.com/company/dochase/" target="_blank" rel="noopener noreferrer">
+              <img src="images/linkedin-icon.svg" alt="LinkedIn" width="29" height="28">
+            </a>
+          </div>
+        </div>
+        <!-- Footer Right: Detailed Information -->
+        <div class="footer-right">
+          <div class="footer-column">
+            <div class="footer-section">
+              <h3>SOLUTIONS</h3>
+              <ul>
+                <li><a href="https://dochase.com/solutions/#dsp" target="_blank" rel="noopener noreferrer">Programmatic Ads (DSP)</a></li>
+                <li><a href="https://dochase.com/solutions/#customer-acquisition" target="_blank" rel="noopener noreferrer">Customer Acquisition</a></li>
+                <li><a href="https://dochase.com/solutions/#lead-generation" target="_blank" rel="noopener noreferrer">Lead Generation</a></li>
+                <li><a href="https://dochase.com/solutions/#lead-generation" target="_blank" rel="noopener noreferrer">App Installation</a></li>
+                <li><a href="https://dochase.com/solutions/#lead-generation" target="_blank" rel="noopener noreferrer">Website Traffic</a></li>
+                <li><a href="https://dochase.com/solutions/#lead-generation" target="_blank" rel="noopener noreferrer">Sign Up</a></li>
+                <li><a href="https://dochase.com/solutions/#lead-generation" target="_blank" rel="noopener noreferrer">Registration</a></li>
+                <li><a href="https://dochase.com/solutions/#customer-engagement" target="_blank" rel="noopener noreferrer">Customer Engagement</a></li>
+                <li><a href="https://dochase.com/solutions/#retargeting" target="_blank" rel="noopener noreferrer">Retargeting</a></li>
+              </ul>
+            </div>
+            <div class="footer-section">
+              <h3>RESOURCES</h3>
+              <ul>
+                <li><a href="https://dochase.com/resources/publisher-guide" target="_blank" rel="noopener noreferrer">Publisher Guide</a></li>
+                <li><a href="https://dochase.com/resources/advertiser-guide" target="_blank" rel="noopener noreferrer">Advertiser Guide</a></li>
+                <li><a href="https://dochase.com/resources/success-stories" target="_blank" rel="noopener noreferrer">Case Studies</a></li>
+                <li><a href="https://dochase.com/blog" target="_blank" rel="noopener noreferrer">Blog</a></li>
+                <li><a href="https://dochase.com/#form" target="_blank" rel="noopener noreferrer">Contact Us</a></li>
+                <li><a href="https://dochase.com/detailed-stories" target="_blank" rel="noopener noreferrer">Our Clientele</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-column">
+            <div class="footer-section">
+              <h3>PRODUCTS</h3>
+              <ul>
+                <li><a href="https://dochase.com/products/#messaging" target="_blank" rel="noopener noreferrer">Messaging</a></li>
+                <li><a href="https://dochase.com/products/#chatbot" target="_blank" rel="noopener noreferrer">Chatbot</a></li>
+                <li><a href="https://dochase.com/products/#native-ads" target="_blank" rel="noopener noreferrer">Native Ads</a></li>
+                <li><a href="https://dochase.com/products/#click-to-whatsapp" target="_blank" rel="noopener noreferrer">Click to Whatsapp</a></li>
+                <li><a href="https://dochase.com/products/#click-to-ussd" target="_blank" rel="noopener noreferrer">Click to USSD</a></li>
+                <li><a href="https://dochase.com/products/#video-ads" target="_blank" rel="noopener noreferrer">Video Ads</a></li>
+              </ul>
+            </div>
+            <div class="footer-section">
+              <h3>TECHNICAL INFO</h3>
+              <ul>
+                <li><a href="https://dochase.com/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
+                <li><a href="https://dochase.com/terms-and-conditions" target="_blank" rel="noopener noreferrer">Terms and Conditions</a></li>
+                <li><a href="https://dochase.com/ad-quality" target="_blank" rel="noopener noreferrer">Ad Quality</a></li>
+                <li><a href="https://dochase.com/frequently-asked-questions" target="_blank" rel="noopener noreferrer">FAQ</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-column">
+            <div class="footer-section">
+              <h3>CONTACT</h3>
+              <p><strong>United States</strong><br>
+              <ul>
+                <li>Address: 220 Davidson Avenue, Sommerset NJ 08873</li>
+                <li>Phone: +1 732 788 3571</li>
+              </ul>
+              </p>
+              <p><strong>Singapore</strong><br>
+              <ul>
+                <li>Address: 160, Robinson Road #14-04</li>
+                <li>Phone: +068 914</li>
+                <li>Email: info@dochase.com</li>
+              </ul>
+              </p>
+              <p><strong>Nigeria</strong><br>
+              <ul>
+                <li>Address: 361, Herbert Macaulay Way, Yaba, Lagos, Nigeria</li>
+                <li>Phone: +(234) 705 400 0728, +(234) 803 441 0381</li>
+                <li>Email: info@dochase.com</li>
+              </ul>
+              </p>
+              <p><strong>Kenya</strong><br>
+              <ul>
+                <li>Address: 220 Delta Corner annex Ring Road Westlands Lane, Westlands District</li>
+                <li>Phone: 00100 - G.P.O Nairobi</li>
+              </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer Bottom: Copyright Information -->
+      <div class="footer-bottom">
+        <div class="footer-copyright">&copy; 2024 Dochase</div>
+      </div>
+    </footer>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
